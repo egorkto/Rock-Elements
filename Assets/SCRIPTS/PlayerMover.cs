@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMover : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerMover : MonoBehaviour
     private ThirdPersonInputSystem playerActionsAsset;
     private InputAction _move;
     private InputAction _mouseLook;
+    private InputAction _run;
     private Rigidbody _rb;
     private void Awake()
     {
@@ -39,17 +41,25 @@ public class PlayerMover : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene(1);
+        }
         LookAt();
-        Input();
+        GetInput();
         Move();  
     }
-    private void Input()
+    private void GetInput()
     {
         _forceDirection += _move.ReadValue<Vector2>().x * GetCameraRight(playerCamera) * _movementForce;
         _forceDirection += _move.ReadValue<Vector2>().y * GetCameraForward(playerCamera) * _movementForce;
     }
     private void Move()
     {
+        if(_run.IsPressed() && _move.IsPressed())
+        {
+
+        }
         _rb.AddForce(_forceDirection, ForceMode.Impulse);
         _forceDirection = Vector3.zero;
         if (_rb.velocity.y < 0f)

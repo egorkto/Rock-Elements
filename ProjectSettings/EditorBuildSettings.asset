@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/DaniilScene.unity
+    path: Assets/Scenes/StartScene.unity
+    guid: df6fbd29cd813e84ab20c78a0f6524f8
+  - enabled: 1
+    path: Assets/Scenes/GlobalMap.unity
+    guid: e7cf64203b486b74787094a53141a15d
+  - enabled: 1
+    path: Assets/Scenes/Garages.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Streets.unity
+    guid: 63358f05c08cd684c8c8ccbf399f3067
+  - enabled: 1
+    path: Assets/Scenes/Panels.unity
+    guid: 4e1faa7b6eeeb0b44ac895dc3a36f931
+  - enabled: 1
+    path: Assets/Scenes/BossFight.unity
+    guid: d9c4c392c6cf63d46b2bfa3e3f19b345
   m_configObjects: {}

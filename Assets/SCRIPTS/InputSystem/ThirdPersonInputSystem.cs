@@ -53,6 +53,15 @@ public partial class @ThirdPersonInputSystem: IInputActionCollection2, IDisposab
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchPlayerInput"",
+                    ""type"": ""Button"",
+                    ""id"": ""308b04be-682f-4f2a-918c-77097fe21a27"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -143,6 +152,17 @@ public partial class @ThirdPersonInputSystem: IInputActionCollection2, IDisposab
                     ""action"": ""RunInput"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9c23520f-82c3-450d-8304-10fabf6fdd7a"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchPlayerInput"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -154,6 +174,7 @@ public partial class @ThirdPersonInputSystem: IInputActionCollection2, IDisposab
         m_Player_MoveInput = m_Player.FindAction("MoveInput", throwIfNotFound: true);
         m_Player_MouseInput = m_Player.FindAction("MouseInput", throwIfNotFound: true);
         m_Player_RunInput = m_Player.FindAction("RunInput", throwIfNotFound: true);
+        m_Player_SwitchPlayerInput = m_Player.FindAction("SwitchPlayerInput", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -218,6 +239,7 @@ public partial class @ThirdPersonInputSystem: IInputActionCollection2, IDisposab
     private readonly InputAction m_Player_MoveInput;
     private readonly InputAction m_Player_MouseInput;
     private readonly InputAction m_Player_RunInput;
+    private readonly InputAction m_Player_SwitchPlayerInput;
     public struct PlayerActions
     {
         private @ThirdPersonInputSystem m_Wrapper;
@@ -225,6 +247,7 @@ public partial class @ThirdPersonInputSystem: IInputActionCollection2, IDisposab
         public InputAction @MoveInput => m_Wrapper.m_Player_MoveInput;
         public InputAction @MouseInput => m_Wrapper.m_Player_MouseInput;
         public InputAction @RunInput => m_Wrapper.m_Player_RunInput;
+        public InputAction @SwitchPlayerInput => m_Wrapper.m_Player_SwitchPlayerInput;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -243,6 +266,9 @@ public partial class @ThirdPersonInputSystem: IInputActionCollection2, IDisposab
             @RunInput.started += instance.OnRunInput;
             @RunInput.performed += instance.OnRunInput;
             @RunInput.canceled += instance.OnRunInput;
+            @SwitchPlayerInput.started += instance.OnSwitchPlayerInput;
+            @SwitchPlayerInput.performed += instance.OnSwitchPlayerInput;
+            @SwitchPlayerInput.canceled += instance.OnSwitchPlayerInput;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -256,6 +282,9 @@ public partial class @ThirdPersonInputSystem: IInputActionCollection2, IDisposab
             @RunInput.started -= instance.OnRunInput;
             @RunInput.performed -= instance.OnRunInput;
             @RunInput.canceled -= instance.OnRunInput;
+            @SwitchPlayerInput.started -= instance.OnSwitchPlayerInput;
+            @SwitchPlayerInput.performed -= instance.OnSwitchPlayerInput;
+            @SwitchPlayerInput.canceled -= instance.OnSwitchPlayerInput;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -278,5 +307,6 @@ public partial class @ThirdPersonInputSystem: IInputActionCollection2, IDisposab
         void OnMoveInput(InputAction.CallbackContext context);
         void OnMouseInput(InputAction.CallbackContext context);
         void OnRunInput(InputAction.CallbackContext context);
+        void OnSwitchPlayerInput(InputAction.CallbackContext context);
     }
 }

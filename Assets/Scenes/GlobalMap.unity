@@ -704,7 +704,7 @@ GameObject:
   - component: {fileID: 1638669494}
   - component: {fileID: 1638669493}
   - component: {fileID: 1638669492}
-  - component: {fileID: 1638669491}
+  - component: {fileID: 1638669495}
   m_Layer: 5
   m_Name: DvoriButton
   m_TagString: Untagged
@@ -732,22 +732,6 @@ RectTransform:
   m_AnchoredPosition: {x: -602, y: -170}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1638669491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638669489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5284dd835ae474d4c898b62d15b60a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetSceneIndex: 3
-  _button: {fileID: 1638669492}
-  _image: {fileID: 1638669493}
-  _inactiveSprite: {fileID: 0}
 --- !u!114 &1638669492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -792,7 +776,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1638669491}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MapSpot, Assembly-CSharp
         m_MethodName: Activate
         m_Mode: 1
@@ -842,6 +826,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638669489}
   m_CullTransparentMesh: 1
+--- !u!114 &1638669495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638669489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f37dbdd75882a14f9799c8bbfc36caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetSceneIndex: 0
+  _button: {fileID: 0}
+  _image: {fileID: 0}
+  _inactiveSprite: {fileID: 0}
 --- !u!1 &1754300727
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,6 +989,7 @@ GameObject:
   - component: {fileID: 1826405669}
   - component: {fileID: 1826405668}
   - component: {fileID: 1826405667}
+  - component: {fileID: 1826405671}
   m_Layer: 5
   m_Name: BossFightButton
   m_TagString: Untagged
@@ -1126,6 +1127,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826405665}
   m_CullTransparentMesh: 1
+--- !u!114 &1826405671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826405665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f37dbdd75882a14f9799c8bbfc36caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetSceneIndex: 0
+  _button: {fileID: 0}
+  _image: {fileID: 0}
+  _inactiveSprite: {fileID: 0}
 --- !u!1 &1938998836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,7 +1341,7 @@ GameObject:
   - component: {fileID: 1964140912}
   - component: {fileID: 1964140911}
   - component: {fileID: 1964140910}
-  - component: {fileID: 1964140909}
+  - component: {fileID: 1964140914}
   m_Layer: 5
   m_Name: GlobalMap
   m_TagString: Untagged
@@ -1332,18 +1349,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1964140909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964140908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9456d3a61a4a27418f6ef5fe4dec575, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1964140910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1431,6 +1436,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1964140914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964140908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f08e9d10c6a0a94ea0dfc71cba004df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spots:
+  - {fileID: 2107074278}
 --- !u!1 &2107074272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,7 +1462,7 @@ GameObject:
   - component: {fileID: 2107074277}
   - component: {fileID: 2107074276}
   - component: {fileID: 2107074275}
-  - component: {fileID: 2107074274}
+  - component: {fileID: 2107074278}
   m_Layer: 5
   m_Name: GaragesButton
   m_TagString: Untagged
@@ -1471,22 +1490,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2107074274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107074272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5284dd835ae474d4c898b62d15b60a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetSceneIndex: 2
-  _button: {fileID: 2107074275}
-  _image: {fileID: 2107074276}
-  _inactiveSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &2107074275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1531,9 +1534,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2107074274}
+      - m_Target: {fileID: 2107074278}
         m_TargetAssemblyTypeName: MapSpot, Assembly-CSharp
-        m_MethodName: Activate
+        m_MethodName: Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1581,6 +1584,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107074272}
   m_CullTransparentMesh: 1
+--- !u!114 &2107074278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107074272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f37dbdd75882a14f9799c8bbfc36caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetSceneIndex: 2
+  _button: {fileID: 2107074275}
+  _image: {fileID: 2107074276}
+  _inactiveSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &2107292324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,6 +1613,7 @@ GameObject:
   - component: {fileID: 2107292328}
   - component: {fileID: 2107292327}
   - component: {fileID: 2107292326}
+  - component: {fileID: 2107292330}
   m_Layer: 5
   m_Name: PanelsButton
   m_TagString: Untagged
@@ -1731,6 +1751,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107292324}
   m_CullTransparentMesh: 1
+--- !u!114 &2107292330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107292324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f37dbdd75882a14f9799c8bbfc36caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetSceneIndex: 0
+  _button: {fileID: 0}
+  _image: {fileID: 0}
+  _inactiveSprite: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
